@@ -1,4 +1,4 @@
-package com.snippet;
+package com.snippet.practice;
 
 public class ListNode {
     int val;

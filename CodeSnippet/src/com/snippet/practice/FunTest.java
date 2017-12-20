@@ -1,4 +1,4 @@
-package com.snippet;
+package com.snippet.practice;
 
 public class FunTest
 {
@@ -62,7 +62,7 @@ public class FunTest
         printList(list1);
         printList(list2);
 
-        Solution ss = new Solution();
+        ListNodeMerge ss = new ListNodeMerge();
 
 
         ListNode list = ss.Merge(list1, list2);

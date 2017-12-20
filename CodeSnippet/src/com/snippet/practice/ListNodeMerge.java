@@ -1,12 +1,11 @@
-package com.snippet;
-
+package com.snippet.practice;
 
 /**
  * 输入两个单调递增的链表，输出两个链表合成后的链表，合成后的链表满足单调不减规则。
  *
  *
  */
-public class Solution
+public class ListNodeMerge
 {
     /**
      * 非递归版本
@@ -14,7 +13,7 @@ public class Solution
      * @param list2
      * @return
      */
-    public ListNode Merge(ListNode list1,ListNode list2)
+    public ListNode Merge(ListNode list1, ListNode list2)
     {
         // validate params
         if (list1 == null || list2 == null)
@@ -101,7 +100,7 @@ public class Solution
      * @param list2
      * @return
      */
-    public ListNode Merge1(ListNode list1,ListNode list2)
+    public ListNode Merge1(ListNode list1, ListNode list2)
     {
         if(list1 == null)
         {
