@@ -1,6 +1,6 @@
 package com.snippet.algorithm.sort;
 
-public class QuickSortTest
+public class QuickSortMainTest
 {
     public static void main(String[] args)
     {

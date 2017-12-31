@@ -2,6 +2,14 @@ package com.snippet.algorithm.sort;
 
 public class QuickSort
 {
+    public void sort(int [] array)
+    {
+        if (array != null && array.length > 1)
+        {
+            sort(array, 0, array.length - 1);
+        }
+    }
+
     public void sort(int [] array, int low, int high)
     {
         if (array == null || array.length == 1)
@@ -46,7 +54,6 @@ public class QuickSort
         array[low] = tmp;
 
 
-        // TODO
         sort(array, 0, i - 1);
         sort(array, i + 1, high);
 
