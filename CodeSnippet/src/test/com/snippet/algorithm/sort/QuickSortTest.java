@@ -43,6 +43,17 @@ public class QuickSortTest
     @org.junit.Test
     public void sort03() throws Exception
     {
+        int a [] = {9, -6, 4, 22, 10, 99};
+        quickSort.sort(a, 0, a.length - 1);
+
+        int[] result = {-6, 4, 9, 10, 22, 99};
+
+        assertArrayEquals(a, result);
+    }
+
+    @org.junit.Test
+    public void sort04() throws Exception
+    {
         int a [] = {0, 0, 0, 0, 0};
         quickSort.sort(a, 0, a.length - 1);
 
