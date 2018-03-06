@@ -11,6 +11,7 @@ import java.util.ArrayList;
 public class UglyNumber
 {
 
+    // TODO 容量什么的……
     private ArrayList<Integer> unList = null;
 
     public UglyNumber()
