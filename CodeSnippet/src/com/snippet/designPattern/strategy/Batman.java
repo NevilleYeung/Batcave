@@ -27,5 +27,12 @@ public class Batman
         fHuntContext.doStrategy();
 
         System.out.println("\njust a joke...");
+
+
+        // test
+        System.out.println("math test...");
+
+        System.out.println("3 + 5 = " + Calculator.ADD.exec(3, 5));
+        System.out.println("3 - 5 = " + Calculator.SUB.exec(3, 5));
     }
 }
