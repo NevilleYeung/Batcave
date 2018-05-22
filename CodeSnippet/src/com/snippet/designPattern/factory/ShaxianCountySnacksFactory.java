@@ -1,19 +1,19 @@
 package com.snippet.designPattern.factory;
 
 /**
- * 简单工厂模式
+ * 工厂模式：多种类的创建
+ * TODO: 把chicken和drink分开建立工厂，可以修改为抽象工厂
  *
  * 创建型
  */
-public class SimpleChickenFactory
+public class ShaxianCountySnacksFactory extends AbstractFoodFactory
 {
 
-    public static IChicken createChickens(Chickens type)
+    @Override
+    public IChicken createChickens(Chickens type)
     {
         switch (type)
         {
-            // 还可以用反射来实例化类
-            // 如：result = (FriedChicken) Class.forName(clz.getName()).newInstance();
             case TYPE_SC:
                 return new SlicedColdChicken();
             case TYPE_FD:
@@ -22,5 +22,12 @@ public class SimpleChickenFactory
             default:
                 return new ShreddedChicken();
         }
+
+    }
+
+    @Override
+    public IDrinks createDrinks(int type)
+    {
+        return new ColaDrinks();
     }
 }
