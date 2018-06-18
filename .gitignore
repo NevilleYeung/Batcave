@@ -1,0 +1,12 @@
+
+*.class
+CodeSnippet/.idea/workspace.xml
+CodeSnippet/.idea/modules.xml
+CodeSnippet/.idea/misc.xml
+CodeSnippet/.idea/libraries/junit_4_10.xml
+CodeSnippet/.idea/codeStyles/codeStyleConfig.xml
+CodeSnippet/.idea/misc.xml
+SpringSnippet/SpringRest/src/test/test.iml
+SpringSnippet/SpringRest/src/main/main.iml
+CodeSnippet/CodeSnippet.iml
+CodeSnippet/.idea/workspace.xml
