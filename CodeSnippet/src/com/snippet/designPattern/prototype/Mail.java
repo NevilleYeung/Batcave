@@ -19,7 +19,10 @@ public class Mail implements Cloneable
     }
 
     /**
-     * 浅拷贝
+     * 浅拷贝；
+     * 调用该方法不会执行构造函数；
+     * 成员变量不可使用final关键字修饰；
+     *
      * @return
      */
     @Override
