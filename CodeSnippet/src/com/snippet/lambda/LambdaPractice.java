@@ -16,15 +16,18 @@ public class LambdaPractice
         //Java 8 lambda方式：
         new Thread( () -> System.out.println("In Java8, Lambda expression rocks !!") ).start();
 
-        // 2
-        //
 
+        // 2
+        // lambda表达式只能实现函数式接口
+        Hello hello = shit -> { System.out.println("hello "+ shit);};
+        say(hello);
+        say((String hell) -> System.out.println("fuck " + hell));
+
+        // 3 TODO
     }
 
-    public void say(Hello h)
+    public static void say(Hello h)
     {
-        h.sayYeah();
-
         h.sayName("shitty");
     }
 }
