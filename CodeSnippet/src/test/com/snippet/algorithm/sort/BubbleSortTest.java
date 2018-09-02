@@ -38,4 +38,22 @@ public class BubbleSortTest
         System.out.println(Arrays.toString(array));
         Assert.assertArrayEquals(new int[]{-21, -1, 0, 6, 7, 7, 8, 12}, array);
     }
+
+    @Test
+    public void testCocktailSort1()
+    {
+        int[] array = new int[]{0, 8, 7, 7, 6, -21, 12, -1};
+        bubbleSort.cocktailSort1(array);
+        System.out.println(Arrays.toString(array));
+        Assert.assertArrayEquals(new int[]{-21, -1, 0, 6, 7, 7, 8, 12}, array);
+    }
+
+    @Test
+    public void testCocktailSort2()
+    {
+        int[] array = new int[]{0, 8, 7, 7, 6, -21, 12, -1};
+        bubbleSort.cocktailSort2(array);
+        System.out.println(Arrays.toString(array));
+        Assert.assertArrayEquals(new int[]{-21, -1, 0, 6, 7, 7, 8, 12}, array);
+    }
 }

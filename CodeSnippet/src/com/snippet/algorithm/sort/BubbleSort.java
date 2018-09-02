@@ -2,7 +2,6 @@ package com.snippet.algorithm.sort;
 
 /**
  * 冒泡排序
- *
  */
 public class BubbleSort
 {
@@ -23,7 +22,7 @@ public class BubbleSort
 
         for (int i = 0; i < array.length; i++)
         {
-            for(int j = 0; j < array.length - i - 1; j++)
+            for (int j = 0; j < array.length - i - 1; j++)
             {
                 if (array[j] > array[j + 1])
                 {
@@ -57,7 +56,7 @@ public class BubbleSort
         for (int i = 0; i < array.length; i++)
         {
             isSorted = true;
-            for(int j = 0; j < array.length - i - 1; j++)
+            for (int j = 0; j < array.length - i - 1; j++)
             {
                 if (array[j] > array[j + 1])
                 {
@@ -100,7 +99,7 @@ public class BubbleSort
         for (int i = 0; i < array.length; i++)
         {
             isSorted = true;
-            for(int j = 0; j < sortBorder; j++)
+            for (int j = 0; j < sortBorder; j++)
             {
                 if (array[j] > array[j + 1])
                 {
@@ -135,11 +134,119 @@ public class BubbleSort
      */
     public void cocktailSort1(int[] array)
     {
+        int tmp = 0;
 
+        // TODO array.length / 2 or array.length / 2 - 1
+        for (int i = 0; i < array.length / 2; i++)
+        {
+            //有序标记，每一轮的初始是true
+            boolean isSorted = true;
+
+            //奇数轮，从左向右比较和交换
+            for (int j = i; j < array.length - i - 1; j++)
+            {
+                if (array[j] > array[j + 1])
+                {
+                    tmp = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = tmp;
+
+                    //有元素交换，所以不是有序，标记变为false
+                    isSorted = false;
+                }
+            }
+
+            if (isSorted)
+            {
+                break;
+            }
+
+            //偶数轮，从右向左比较和交换
+            for (int j = array.length - i - 1; j > i; j--)
+            {
+
+                if (array[j] < array[j - 1])
+                {
+                    tmp = array[j];
+                    array[j] = array[j - 1];
+                    array[j - 1] = tmp;
+
+                    //有元素交换，所以不是有序，标记变为false
+                    isSorted = false;
+                }
+            }
+
+            if (isSorted)
+            {
+                break;
+            }
+        }
     }
 
+    /**
+     * 鸡尾酒排序
+     * 为了减少排序轮数的优化版
+     *
+     * @param array
+     */
     public void cocktailSort2(int[] array)
     {
+        int tmp = 0;
+        int rightExchangeIndex = 0;
+        int leftExchangeIndex = 0;
+        // 无序数列的边界
+        int rightSortBorder = array.length - 1;
+        int leftSortBorder = 0;
 
+        // TODO array.length / 2 or array.length / 2 - 1
+        for (int i = 0; i < array.length / 2; i++)
+        {
+            //有序标记，每一轮的初始是true
+            boolean isSorted = true;
+
+            //奇数轮，从左向右比较和交换
+            for (int j = leftSortBorder; j < rightSortBorder; j++)
+            {
+                if (array[j] > array[j + 1])
+                {
+                    tmp = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = tmp;
+
+                    //有元素交换，所以不是有序，标记变为false
+                    isSorted = false;
+
+                    rightExchangeIndex = j;
+                }
+            }
+
+            if (isSorted)
+            {
+                break;
+            }
+            rightSortBorder = rightExchangeIndex;
+
+            //偶数轮，从右向左比较和交换
+            for (int j = rightSortBorder; j > leftSortBorder; j--)
+            {
+
+                if (array[j] < array[j - 1])
+                {
+                    tmp = array[j];
+                    array[j] = array[j - 1];
+                    array[j - 1] = tmp;
+
+                    //有元素交换，所以不是有序，标记变为false
+                    isSorted = false;
+                    leftExchangeIndex = j;
+                }
+            }
+
+            if (isSorted)
+            {
+                break;
+            }
+            leftSortBorder = leftExchangeIndex;
+        }
     }
 }
