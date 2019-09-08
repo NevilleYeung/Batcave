@@ -1,8 +1,5 @@
-package test.com.snippet.practice;
+package com.snippet.practice;
 
-import static org.junit.Assert.*;
-
-import com.snippet.practice.PokerFace;
 import org.junit.Test;
 
 public class PokerFaceTest

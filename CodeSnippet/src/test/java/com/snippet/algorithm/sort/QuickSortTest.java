@@ -1,9 +1,9 @@
-package test.com.snippet.algorithm.sort;
+package com.snippet.algorithm.sort;
 
-import com.snippet.algorithm.sort.QuickSort;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.assertNull;
 
 public class QuickSortTest
 {

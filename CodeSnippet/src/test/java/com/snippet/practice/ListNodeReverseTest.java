@@ -1,10 +1,9 @@
-package test.com.snippet.practice;
+package com.snippet.practice;
 
-import static org.junit.Assert.*;
-
-import com.snippet.practice.ListNode;
-import com.snippet.practice.ListNodeReverse;
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 public class ListNodeReverseTest
 {

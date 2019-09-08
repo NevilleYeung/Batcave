@@ -1,9 +1,5 @@
-package test.com.snippet.practice;
+package com.snippet.practice;
 
-import static org.junit.Assert.*;
-
-import com.snippet.practice.ReConstructBinaryTree;
-import com.snippet.practice.TreeNode;
 import org.junit.Test;
 
 public class ReConstructBinaryTreeTest

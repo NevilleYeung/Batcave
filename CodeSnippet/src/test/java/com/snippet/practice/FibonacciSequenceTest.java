@@ -1,9 +1,8 @@
-package test.com.snippet.practice;
+package com.snippet.practice;
 
-import static org.junit.Assert.*;
-
-import com.snippet.practice.FibonacciSequence;
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class FibonacciSequenceTest
 {

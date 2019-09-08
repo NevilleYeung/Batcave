@@ -1,7 +1,5 @@
-package test.com.snippet.practice;
+package com.snippet.practice;
 
-import com.snippet.practice.ListNode;
-import com.snippet.practice.ListNodeMerge;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -106,7 +104,7 @@ public class ListNodeMergeTest
         // expected result = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
         ListNode result = new ListNode(1);
         ListNode r_tmp = result;
-        for (int i = 1 ; i <= 10; i++)
+        for (int i = 1 ; i < 10; i++)
         {
             r_tmp.next = new ListNode(i + 1);
             r_tmp = r_tmp.next;

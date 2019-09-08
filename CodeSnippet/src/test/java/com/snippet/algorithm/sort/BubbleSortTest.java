@@ -1,12 +1,9 @@
-package test.com.snippet.algorithm.sort;
+package com.snippet.algorithm.sort;
 
-import com.snippet.algorithm.sort.BubbleSort;
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.Arrays;
-
-import static org.junit.Assert.*;
 
 public class BubbleSortTest
 {
